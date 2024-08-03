@@ -1,0 +1,223 @@
+@use './media' as *;
+@use './font' as *;
+
+// VARIABLE SETUP
+@import url(https://fonts.googleapis.com/css2?family=Redressed&family=Roboto:ital,wght@0,200..900;1,200..900&display=swap);
+
+$text-main: #444;
+$text-body: #666;
+$text-accent: #f52423;
+$orange: #f52423;
+$green: #0f2c0e;
+$link: #0f2c0e;
+$link--hover: #db0a0a;
+$background: #fff;
+$font_main: 'Helvetica', sans-serif;
+$font_cursive: 'Amsterdam', sans-serif;
+$shadow: 0px 5px 16px rgba(0,0,0,0.3);
+$margin-bottom: 3%;
+$transition: .25s;
+
+
+// GLOBAL SETUP
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+  font-size: 14px;
+}
+
+body {
+  padding: 0px;
+  text-decoration: none;
+  text-align: center;
+  font-family: $font_main;
+  background-color: $background;
+  color: $text-main;
+}
+
+// GENERAL
+
+%heading {
+  margin: 0px;
+}
+
+h1 {
+  @extend %heading;
+  font-size: 2.8em;
+
+  @include mobile {
+    margin-bottom: 5px;
+  }
+
+  @include desktop {
+    font-size: 5rem;
+  }
+}
+
+h4 {
+  font-weight: 400;
+  color: $text-body;
+  font-size: 1.4rem;
+
+  @include desktop {
+    font-size: 1.6rem;
+  }
+}
+
+p {
+  font-family: $font_main;
+  color: $text-body;
+  font-size: 1rem;
+  font-weight: 300;
+
+  @include desktop {
+    font-size: 1.3rem;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $text-body;
+  transition: $transition;
+
+  &:hover {
+    text-decoration: none;
+    color: $link--hover;
+    transition: $transition;
+
+    p, i {
+      color: $link--hover;
+      transition: $transition;
+    }
+  }
+}
+
+i {
+  color: $orange;
+  font-size: 1.4rem;
+}
+
+
+// FRONT PAGE //
+
+.contain {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 95vw;
+  height: 100%;
+  
+  @include desktop {
+    width: 85vw;
+  }
+
+  @include desktop(large) {
+    width: 72vw;  
+  }
+
+  @include desktop(max) {
+    width: 65vw;  
+  }
+
+  #hp_logo {
+    height: 250px;
+
+    @include desktop {
+      height: 300px;
+    }
+  }
+
+  h1 {
+    // font-family: $font_cursive;
+    font-weight: 500;
+
+    @include mobile {
+      font-size: 2rem;
+    }
+  }
+
+  #subtitle {
+    margin-bottom: $margin-bottom;
+  }
+
+  #action {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: $margin-bottom;
+    width: 100%;
+
+    @include desktop {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      width: 100%;
+    }
+
+    .button {
+      background-color: $text-accent;
+      margin: 10px 0;
+      padding: 10px 0;
+      width: 75vw;
+      border-radius: 30px;
+      font-size: 1.5rem;
+      color: #fff;
+      transition: background-color $transition;
+
+      @include desktop {
+        padding: 20px 0;
+        width: 45%;
+      }
+  
+      &:hover {
+        background-color: $link--hover;
+        transition: background-color $transition;
+      }
+    }
+
+    #or {
+      margin: 5px 0;
+
+      @include desktop {
+        margin: 0 35px;
+        width: 10%;
+      }
+    }
+
+    #contact {
+
+      @include desktop {
+        width: 45%;
+      }
+
+      h4 {
+        margin-bottom: 8px;
+      }
+
+      a {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 6px;
+      }
+      
+      i {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .icons {
+    
+    i {
+      margin: 5px;
+      font-size: 2rem;
+    }
+  } 
+}

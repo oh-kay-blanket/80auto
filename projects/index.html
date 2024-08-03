@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- <link type="text/css" rel="stylesheet" href="https://cdn.rawgit.com/mister-blanket/portfolio/master/css/style.css" /> -->
+		<link type="text/css" rel="stylesheet" href="../css/style.css" />
+		<link rel="icon" href="img/logoBlack.png"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://unpkg.com/moving-shadow"></script>
+
+		<meta property="og:title" content="Mr. Plunkett" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://mrplunkett.com" />
+		<meta property="og:description" content="Web Design & Development" />
+		<meta charset="UTF-8">
+		<title>projects | mr. plunkett</title>
+	</head>
+
+	<body>
+		<div class="wrapper">
+
+			<div class="subbanner">
+				<div class="contain">
+					<nav>
+					  <ul class="nav_wrapper">
+					    <li><a href="../">main</a></li>
+					  </ul>
+					</nav>
+				 <!-- <h1>gross</h1> -->
+				</div>
+			</div>
+
+      <div class="contain projects">
+
+				<div>
+					<h2 class='project-heading'>javascript</h2>
+
+					<a href="https://mister-blanket.github.io/soil/" class='project'>
+						<h4>soil</h4>
+						<p>is my travel map</p>
+					</a>
+
+					<a href="https://github.com/mister-blanket/moving-shadow" class='project'>
+						<h4>moving shadow</h4>
+						<p>is a text-shadow js module</p>
+					</a>
+
+					<a href="https://mister-blanket.github.io/the-dude-abides/" class='project'>
+						<h4>the dude abides</h4>
+						<p>is a canvas game</p>
+					</a>
+
+					<a href="https://mister-blanket.github.io/the-drain/" class='project'>
+						<h4>the drain</h4>
+						<p>is a text game</p>
+					</a>
+				</div>
+
+				<div>
+					<h2 class='project-heading'>react</h2>
+
+					<a href="https://mister-blanket.github.io/movie-translator/" class='project'>
+						<h4>reels</h4>
+						<p>is a movie title translator</p>
+					</a>
+
+					<a href="https://mister-blanket.github.io/vinyl/" class='project'>
+						<h4>vinyl</h4>
+						<p>is my record collection</p>
+					</a>
+
+					<a href="https://mister-blanket.github.io/pulp/" class='project'>
+						<h4>pulp</h4>
+						<p>is the books I've read</p>
+					</a>
+
+					<a href="https://mister-blanket.github.io/adjective-conjugator/" class='project'>
+						<h4>letters</h4>
+						<p>is an adjective conjugator</p>
+					</a>
+
+					<a href="https://mister-blanket.github.io/typing-speed-test/" class='project'>
+						<h4>typer</h4>
+						<p>is a typing speed test</p>
+					</a>
+			</div>
+
+			<div>
+				<h2 class='project-heading'>d3</h2>
+
+				<a href="https://mister-blanket.github.io/blood-lines/" class='project'>
+					<h4>blood lines</h4>
+					<p>is a family tree viewer</p>
+				</a>
+
+				<a href="https://mister-blanket.github.io/d3-sunset/" class='project'>
+					<h4>dusk</h4>
+					<p>is an svg animation</p>
+				</a>
+
+			</div>
+
+			<!-- <div>
+				<h2 class='project-heading'>wordpress</h2>
+
+				<a href="https://wramta.org" class='project'>
+					<h4>wramta</h4>
+					<p>is a music therapy association</p>
+				</a>
+
+				<a href="https://higheroctavehealing.org" class='project'>
+					<h4>hoh</h4>
+					<p>is a music therapy org</p>
+				</a>
+			</div> -->
+		</div>
+	</body>
+</html>
+
+<script>
+const settings = {
+  selector: ".project-heading", // targets class or id
+  shadowType: "perspective-shadow", // "shadow", "dropShadow", "perspective"
+  angle: 80, // Sets height of light source. Should be > 10 && < 100
+  diffusion: 0, // blur-radius
+  color: "#5af", // shadow-color
+	altColor: "#7e3d35",
+	shineColor: "#d9aba577"
+}
+
+movingShadow(settings);
+</script>
