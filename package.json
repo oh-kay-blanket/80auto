@@ -1,0 +1,23 @@
+{
+  "name": "80auto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "sass --style=compressed css/sass/style.scss:css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oh-kay-blanket/80auto.git"
+  },
+  "author": "Kayla Plunkett",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oh-kay-blanket/80auto/issues"
+  },
+  "homepage": "https://github.com/oh-kay-blanket/80auto#readme",
+  "dependencies": {
+    "sass": "^1.77.8"
+  }
+}
