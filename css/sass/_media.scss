@@ -8,7 +8,7 @@ $bp-desktop-large: 1200px; //max 1199px
 $bp-desktop-max: 1320px;
 
 //$size: strings ["medium", "large", "max", "tablet"] or PX value as min-width. Defaults to 545px.
-@mixin desktop($size: $bp-desktop-small) {
+@mixin desktop($size: $bp-tablet) {
     @if ($size == "medium") {
         @media (min-width: $bp-desktop-medium) {
             @content;

@@ -6,62 +6,87 @@
 @import url(https://fonts.googleapis.com/css2?family=Redressed&family=Roboto:ital,wght@0,200..900;1,200..900&display=swap);
 
 * {
-  margin: 0;
+	margin: 0;
 }
 
-html, body {
-  height: 100%;
-  font-size: 16px;
-  overflow-x: hidden;
+html,
+body {
+	height: 100%;
+	font-size: 16px;
+	overflow-x: hidden;
 }
 
 body {
-  padding: 0px;
-  text-decoration: none;
-  text-align: center;
-  font-family: $font--main;
-  background-color: $background;
-  color: $text-main;
-  text-wrap: balance;
+	padding: 0px;
+	text-decoration: none;
+	text-align: center;
+	font-family: $font--main;
+	background-color: $background;
+	color: $text-main;
+	text-wrap: pretty;
 
-  h2 {
-	font-family: "Rammetto One", sans-serif;
-	font-weight: 400;
-	font-style: normal;
-	margin: 0;
-  }
-  
-  a {
-	  text-decoration: none;
-	  color: black;
-  }
+	h1,
+	h2,
+	h3,
+	h4,
+	p,
+	a,
+	li,
+	span {
+		color: $text-main;
+	}
 
-  img {
-	max-width: 100%;
-  }
+	h2 {
+		font-family: "Rammetto One", sans-serif;
+		font-weight: 400;
+		font-style: normal;
+		margin: 0;
+	}
 
-  section {
-	margin: 1rem 0;
-  }
+	a {
+		text-decoration: none;
+		color: black;
+	}
+
+	img {
+		max-width: 100%;
+	}
+
+	section {
+		margin: 1rem 0;
+	}
+}
+
+main {
+	position: relative;
 }
 
 
 // HEADING //
 .heading {
-	font-size: 14px;
-	flex-wrap: wrap;
 	position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    padding: 1px;
-    /* box-shadow: 0 2px 14px #0003; */
-    background: linear-gradient(135deg, $pink, $blue);
-	
+	flex-wrap: wrap;
+	font-size: 14px;
+	left: -2px;
+	top: -2px;
+	width: 101vw;
+	padding: 2px;
+	background: linear-gradient(135deg, $pink 0%, $pink 23%, $blue 77%, $blue 100%);
+
+	@include desktop {
+		position: static;
+		background: none;
+		width: 80%;
+	}
+
 	.heading-inner {
 		justify-content: space-evenly;
 		background-color: white;
 		padding: .5rem;
+
+		@include desktop {
+			justify-content: flex-end;
+		}
 	}
 
 	&.icons-d {
@@ -104,16 +129,24 @@ body {
 // BULLETS //
 #bullets {
 	ul {
-		list-style-type: none;
 		display: flex;
 		flex-direction: column;
 		flex-wrap: wrap;
 		max-height: 200px;
 		padding: 0;
+		list-style-type: none;
 
 		li {
-			margin: .5rem;
-			padding: 0 .25rem;
+			margin: .75rem .5rem;
+			padding: 0 0 0 24px;
+			background-image: url(../img/check.png);
+			background-repeat: no-repeat;
+			background-position: left center;
+			background-size: 20px;
+
+			@include desktop {
+				margin: .75rem 2rem;
+			}
 		}
 	}
 }
@@ -122,7 +155,7 @@ body {
 // ABOUT //
 
 #about {
-	background: linear-gradient(135deg, $pink, $blue);
+	background: linear-gradient(135deg, $pink 0%, $pink 23%, $blue 77%, $blue 100%);
 	border-radius: 20px;
 
 	img {
@@ -140,4 +173,78 @@ body {
 
 #testimonials {
 	max-width: 500px;
+	margin: 2rem;
+
+	.quote {
+		margin: .75rem auto;
+		font-weight: 600;
+	}
+
+	.name {
+		font-style: italic;
+		font-size: 14px;
+		font-weight: 400;
+		text-align: end;
+		margin-right: 2rem;
+
+		.pronouns {
+			color: #6c6c6c;
+			font-size: 12px;
+		}
+	}
+}
+
+
+// CONTACT //
+#contact {
+	padding: 2px;
+	background: linear-gradient(135deg, $pink 0%, $pink 23%, $blue 77%, $blue 100%);
+	width: 90%;
+	max-width: 500px;
+	border-radius: 20px;
+
+	.contact-inner {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 1rem;
+		border-radius: 20px;
+		background-color: white;
+	}
+
+	.contact {
+		display: flex;
+		flex-direction: column;
+
+		@include desktop {
+			// flex-direction: row;
+		}
+
+		a {
+			display: flex;
+			margin: .5rem 0;
+
+			img {
+				margin-right: .75rem;
+			}
+		}
+	}
+}
+
+
+// FOOTER //
+
+footer {
+	margin: 2rem 0 0 0;
+
+	#copyright {
+		display: block;
+		background: linear-gradient(135deg, $pink 0%, $pink 33%, $blue 67%, $blue 100%);
+		-webkit-background-clip: text;
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+		width: fit-content;
+		margin: 1rem auto;
+		font-size: 14px;
+	}
 }
