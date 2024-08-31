@@ -23,6 +23,13 @@ body {
   background-color: $background;
   color: $text-main;
   text-wrap: balance;
+
+  h2 {
+	font-family: "Rammetto One", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	margin: 0;
+  }
   
   a {
 	  text-decoration: none;
@@ -39,31 +46,23 @@ body {
 }
 
 
-// INTRO //
-
-#intro {
-	max-width: 500px;
-}
-
-.subtitle {
-	font-size: 20px;
-}
-
-.icon {
-	width: 24px;
-}
-
-.locations {
-	font-weight: 800;
-	font-style: italic;
-}
-
-
-// ICONS //
-.icons {
+// HEADING //
+.heading {
 	font-size: 14px;
-	margin: 1rem 0;
 	flex-wrap: wrap;
+	position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 1px;
+    /* box-shadow: 0 2px 14px #0003; */
+    background: linear-gradient(135deg, $pink, $blue);
+	
+	.heading-inner {
+		justify-content: space-evenly;
+		background-color: white;
+		padding: .5rem;
+	}
 
 	&.icons-d {
 		align-self: end;
@@ -78,6 +77,27 @@ body {
 			margin-right: .25rem
 		}
 	}
+}
+
+
+// INTRO //
+
+#intro {
+	max-width: 500px;
+	margin-top: 3rem;
+}
+
+.subtitle {
+	font-size: 20px;
+}
+
+.icon {
+	width: 24px;
+}
+
+.locations {
+	font-weight: 800;
+	font-style: italic;
 }
 
 
@@ -108,6 +128,11 @@ body {
 	img {
 		border-radius: 20px;
 		max-width: 100%;
+	}
+
+	.pronouns {
+		font-size: 12px;
+		color: #464646;
 	}
 }
 
