@@ -1,10 +1,10 @@
 @use './media' as *;
 @use './var' as *;
 
-// VARIABLE SETUP
+// GLOBAL //
+
 @import url(https://fonts.googleapis.com/css2?family=Redressed&family=Roboto:ital,wght@0,200..900;1,200..900&display=swap);
 
-// GLOBAL SETUP
 * {
   margin: 0;
 }
@@ -12,6 +12,7 @@
 html, body {
   height: 100%;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 body {
@@ -24,18 +25,73 @@ body {
   
   a {
 	  text-decoration: none;
+	  color: black;
   }
 }
 
+
+// INTRO //
+
 #logo {
-	max-width: 300px;
+	width: 500px;
 }
 
 .icon {
-	width: 30px;
+	width: 24px;
 }
 
 .locations {
 	font-weight: 800;
 	font-style: italic;
+}
+
+
+// ICONS //
+.icons {
+
+	margin: 1rem 0;
+
+	&.icons-d {
+		align-self: end;
+	}
+
+	a {
+		margin: 0 1rem;
+		display: flex;
+		align-items: center;
+
+		img {
+			margin-right: .5rem
+		}
+	}
+}
+
+
+// BULLETS //
+#bullets {
+	ul {
+		list-style-type: none;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		max-height: 200px;
+
+		li {
+			margin: .5rem;
+			padding: 0 .25rem;
+		}
+	}
+}
+
+
+// ABOUT //
+
+#about {
+	background: linear-gradient(135deg, $pink, $blue);
+	border-radius: 20px;
+
+	img {
+		border-radius: 20px;
+		max-width: 100%;
+	}
 }

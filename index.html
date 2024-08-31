@@ -18,28 +18,120 @@
 </head>
 
 <body>
-	<div class="contain d-flex flex-column align-items-center">
+	<main class="container d-flex flex-column align-items-center">
 
-		<img id="logo" src="img/80auto-mirror.png" title="80 auto" class="my-3">
-
-		<h1 class="d-none">80 auto</h1>
-
-		<p class="text-center">Queer-owned, independent auto repair supporting the greater Dallas LGBTQIA+ community.</p>
-
-		<p class="text-center locations">DALLAS PLANO FRISCO RICHARDSON GARLAND MESQUITE MCKINNEY</p>
-
-
-
-		<div class="icons">
-			<a href="https://www.instagram.com/harmonic_home_cleaning/">
-				<img class="icon" src="img/phone.png">
+		<!-- Icons desktop -->
+		<div class="icons icons-d d-none d-md-flex">
+			<a href="sms:+1-469-758-8882">
+				<img class="icon" src="img/sms.png">
+				469-758-8882
 			</a>
-			<a href="https://www.facebook.com/harmonichomecleaning">
+			<a href="mailto: 80autodfw@gmail.com">
 				<img class="icon" src="img/mail.png">
+				80autodfw@gmail.com
 			</a>
 		</div>
 
-	</div>
+		<!-- Intro -->
+		<section id="intro" class="d-flex flex-column align-items-center">
+			<img id="logo" src="img/logo.png" title="80 auto" class="my-3">
+
+			<h1 class="d-none">80 auto</h1>
+
+			<p class="text-center">Queer-owned, independent auto repair supporting the greater Dallas LGBTQIA+ community.</p>
+
+			<p class="text-center locations">DALLAS PLANO FRISCO RICHARDSON<br>GARLAND MESQUITE MCKINNEY</p>
+
+			<!-- Icons mobile -->
+			<div class="icons icons-m d-md-none">
+				<a href="sms:+1-469-758-8882">
+					<img class="icon" src="img/sms.png">
+					469-758-8882
+				</a>
+				<a href="mailto: 80autodfw@gmail.com">
+					<img class="icon" src="img/mail.png">
+					80autodfw@gmail.com
+				</a>
+			</div>
+		</section>
+
+		<!-- Bullets -->
+		<section id="bullets">
+			<ul>
+				<li>
+					<img class="icon" src="img/check.png">
+					<span>Brakes</span>
+				</li>
+				<li>
+					<img class="icon" src="img/check.png">
+					<span>Electrical</span>
+				</li>
+				<li>
+					<img class="icon" src="img/check.png">
+					<span>Suspension</span>
+				</li>
+				<li>
+					<img class="icon" src="img/check.png">
+					<span>Service + tune up</span>
+				</li>
+				<li>
+					<img class="icon" src="img/check.png">
+					<span>Pre-trip inspection</span>
+				</li>
+				<li>
+					<img class="icon" src="img/check.png">
+					<span>Domestic & import</span>
+				</li>
+				<li>
+					<img class="icon" src="img/check.png">
+					<span>Flexible rates</span>
+				</li>
+				<li>
+					<img class="icon" src="img/check.png">
+					<span>On site or in our Garland workshop</span>
+				</li>
+			</ul>
+		</section>
+
+		<!-- About Aidy -->
+		<section id="about" class="row">
+
+			<!-- Mobile name -->
+			<div class="d-md-none">
+				<h2>Aidy Fee</h2>
+				<p class="pronouns">(she/her)</p>
+			</div>
+
+			<div class="col-12 col-md-6">
+				<picture>
+					<source srcset="./img/aidy.jpg?$staticlink$" media="(min-width: 769px)">
+					<img class="img-fluid" src="./img/m_aidy.jpg?$staticlink$" alt="">
+				</picture>
+			</div>
+
+			<!-- Desktop copy -->
+			<div class="col-12 col-md-6">
+				<div class="d-none d-md-block">
+					<h2>Aidy Fee</h2>
+					<p class="pronouns">(she/her)</p>
+				</div>
+				<ul>
+					<li>Owner & lead mechanic</li>
+					<li>ASE Certified</li>
+					<li>10+ years experience</li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- Testimonials -->
+		<section id="testimonials">
+			<div>
+				<p>“Aidy worked on a few projects on my and my wife’s cars. Her incredible experience and level headed, kind demeanor made some very frustrating jobs look easy, and charged fair prices.”</p>
+				<p>Forest <span class="pronouns">(they/them)</span></p>
+			</div>
+		</section>
+
+	</main>
 </body>
 
 </html>
