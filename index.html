@@ -11,8 +11,7 @@
 
 		gtag('config', 'G-FH0GX5M51Q');
 	</script>
-	<link type="text/css" rel="stylesheet" href="css/style.css" />
-	<link type="text/css" rel="stylesheet" href="css/fontawesome/css/all.css" />
+	
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,6 +25,15 @@
 	<meta property="og:description" content="Queer-owned, independent auto repair supporting the greater Dallas LGBTQIA+ community." />
 	<meta charset="UTF-8">
 	<title>80 auto</title>
+
+	<!-- Slick -->
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+	<script type="text/javascript" src="./assets/jquery-3.7.1.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+	<link type="text/css" rel="stylesheet" href="css/fontawesome/css/all.css" />
+	<link type="text/css" rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
@@ -54,14 +62,14 @@
 		<!-- Bullets -->
 		<section id="bullets">
 			<ul>
-				<li>Brakes</li>
-				<li>Electrical</li>
-				<li>Suspension</li>
-				<li>Service + tune up</li>
-				<li>Pre-trip inspection</li>
-				<li>Domestic & import</li>
-				<li>Flexible rates</li>
-				<li>On site or drop off</li>
+				<li><img src='./img/check.png'>Brakes</li>
+				<li><img src='./img/check.png'>Electrical</li>
+				<li><img src='./img/check.png'>Suspension</li>
+				<li><img src='./img/check.png'>Service + tune up</li>
+				<li><img src='./img/check.png'>Pre-trip inspection</li>
+				<li><img src='./img/check.png'>Domestic & import</li>
+				<li><img src='./img/check.png'>Flexible rates</li>
+				<li><img src='./img/check.png'>On site or drop off</li>
 			</ul>
 		</section>
 
@@ -97,12 +105,31 @@
 		</section>
 
 		<!-- Testimonials -->
-		<section id="testimonials">
+		<section id="testimonials" class="mb-5">
+			<div>
+				<p class="quote">“As far as reliable and trustworthy mechanics go, I cannot recommend Aidy enough. She did a great job of fixing my cooling system and helped me save a boatload of money in the process. From quality of life updates to custom touches to your vehicle, look no further!”</p>
+				<p class="name">Ben <span class="pronouns">(he/him)</span></p>
+			</div>
 			<div>
 				<p class="quote">“Aidy worked on a few projects on my and my wife’s cars. Her incredible experience and level headed, kind demeanor made some very frustrating jobs look easy, and charged fair prices.”</p>
 				<p class="name">Forest <span class="pronouns">(they/them)</span></p>
 			</div>
+			<div>
+				<p class="quote">“Aidy repaired paint and body damage on my Kia. She was quick and communicative, the final result looks great, and she charged less than half of what I was quoted at another shop. I now have my go-to mechanic!”</p>
+				<p class="name">Kayla <span class="pronouns">(she/her)</span></p>
+			</div>
 		</section>
+
+		<script>
+			$("#testimonials").slick({
+				slidesToShow: 1,
+				autoplay: true,
+				infinite: true,
+				dots:true,
+				arrows: true,
+				autoplaySpeed: 9000
+				});
+		</script>
 
 		<!-- Contact -->
 		<section id="contact">

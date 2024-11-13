@@ -48,6 +48,10 @@ body {
 		color: black;
 	}
 
+	li {
+		text-align: left;
+	}
+
 	img {
 		max-width: 100%;
 	}
@@ -59,6 +63,18 @@ body {
 
 main {
 	position: relative;
+}
+
+// SLICK //
+.slick-dots li button:before {
+	opacity: .35;
+	color: #FFB1B1;
+	font-size: 8px;
+}
+
+.slick-dots li.slick-active button:before {
+	opacity: 1;
+	color: #FFB1B1;
 }
 
 
@@ -138,11 +154,13 @@ main {
 
 		li {
 			margin: .75rem .5rem;
-			padding: 0 0 0 24px;
-			background-image: url(../img/check.png);
-			background-repeat: no-repeat;
-			background-position: left center;
-			background-size: 20px;
+			display: flex;
+			align-items: center;
+
+			img {
+				width: 30px;
+				padding-right: 8px;
+			}
 
 			@include desktop {
 				margin: .75rem 2rem;
@@ -172,6 +190,7 @@ main {
 // TESTIMONIALS //
 
 #testimonials {
+	width: 100%;
 	max-width: 500px;
 	margin: 2rem;
 
